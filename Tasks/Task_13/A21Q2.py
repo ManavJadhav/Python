@@ -1,7 +1,7 @@
 ######################################################################################################
 # Program Name     : MaxMinThreaded
-# Input            : List of integers from user
-# Output           : Prints maximum and minimum number
+# Input            : List 
+# Output           : None
 # Description      : Finds maximum and minimum values from a list using two threads
 # Author           : Manav Mahadev Jadhav
 # Date             : 24/01/2026

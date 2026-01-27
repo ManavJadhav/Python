@@ -8,13 +8,17 @@
 ######################################################################################################
 import threading
 
+#lobj = threading.Lock()
+
 def DisplayEven():
+    # with lobj :
     print("Inside : ",threading.current_thread().name)
     
     for i in range(2, 21, 2):
         print(i)
 
 def DisplayOdd():
+    # with lobj:
     print("Inside : ",threading.current_thread().name)
 
     for i in range(1, 20, 2):

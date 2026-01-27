@@ -1,7 +1,7 @@
 ######################################################################################################
 # Program Name     : PrimeNonPrimeThreaded
-# Input            : List of integers from user
-# Output           : Prints which numbers are prime and which are non-prime
+# Input            : List
+# Output           : None
 # Description      : Determines prime and non-prime numbers from a list using two separate threads
 # Author           : Manav Mahadev Jadhav
 # Date             : 24/01/2026
