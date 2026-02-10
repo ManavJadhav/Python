@@ -1,0 +1,26 @@
+class Demo :
+    No = 10
+
+    def __init__(self,A,B):
+        self.Value1 = A
+        self.Value2 = B
+
+    def fun(self):
+        print("Inside Instance method fun : ",self.Value1,self.Value2)
+
+    @classmethod            # Compulsory
+    def sun(cls):
+        print("Inside Class method sun : ", cls.No)
+
+    @staticmethod           # Not Compulsory
+    def gun():
+        print("Inside Static method gun : ",Demo.No)
+
+Demo.sun()
+print("Class variable No : ",Demo.No)
+
+obj = Demo(11,21)
+obj.fun()
+print("Instance variable : ",obj.Value1,obj.Value2)
+
+Demo.gun()
