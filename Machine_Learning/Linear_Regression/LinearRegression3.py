@@ -1,0 +1,61 @@
+import numpy as np 
+import pandas as pd
+import matplotlib.pyplot as plt
+
+def RegressionPredictor():
+    # Load the data
+    X = [1,2,3,4,5]
+    Y = [3,4,2,4,5]
+
+    print("Values of Independent variables : X - ",X)
+    print("Values of Dependent variables : Y - ",Y)
+
+    mean_x = np.mean(X)
+    mean_y = np.mean(Y)
+
+    print("X_MEAN is : ",mean_x)    # 3.0      
+    print("Y_MEAN is : ",mean_y)    # 3.6
+
+    n = len(X)      # 5
+
+    # Y = mX + C
+
+    # m = (summ (X-X_bar) * (Y-Y_bar)) /  (Summ (X -X_bar)**2)
+
+    numerator = 0
+    denominator = 0
+
+    for i in range(n):
+        numerator = numerator + ((X[i]- mean_x) * (Y[i] -mean_y))
+        denominator = denominator + ((X[i] - mean_x)**2)
+
+    m = numerator / denominator
+
+    print("Slope of line ie m : ",m)    # 0.4
+
+    C = mean_y - (m * mean_x)
+
+    print("Y-Intercept of line i.e C : ",C)
+
+    # R**2 = ((summ (Yp-Ybar)**2 / (Y-Y_bar)**2 )
+    # Yp = m * X + C
+    R2 = 0
+    Yp = 0
+
+    numerator = 0
+    denominator = 0
+
+    for i in range(n):
+        Yp = m * X[i] + C
+        numerator = numerator + (Yp - mean_y)**2
+        denominator = denominator + (Y[i] - mean_y)**2
+
+    
+    R2 = numerator/denominator
+    print("R**2 Score :",R2)
+
+def main():
+    RegressionPredictor()
+
+if __name__ =="__main__":
+    main()
