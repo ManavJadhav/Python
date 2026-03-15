@@ -4,7 +4,7 @@
 # Output             : Predicted class based on nearest neighbors
 # Description        : Implements KNN algorithm manually using Euclidean Distance
 # Author             : Manav Mahadev Jadhav
-# Date               : 5/03/2026
+# Date               : 05/03/2026
 #=====================================================================================================
 
 import math
